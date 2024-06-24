@@ -59,4 +59,11 @@ export const studentsData = [
     password: "20202034",
     name: "Nguyễn Thị Hoan",
   },
+  {
+    studentId: "admin",
+    email: "admin@hust.com",
+    password: "admin",
+    name: "admin",
+    isAdmin: true,
+  },
 ];

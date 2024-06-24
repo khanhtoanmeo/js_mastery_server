@@ -5,6 +5,7 @@ import * as authController from "../controllers/authController";
 import * as codeController from "../controllers/codeController";
 import * as postsController from "../controllers/postsController";
 import * as commentsController from "../controllers/commentsController";
+import * as submissionsController from "../controllers/submissionController";
 
 //students routes
 router.route("/students/sync").post(studentsController.sync);
@@ -24,5 +25,16 @@ router.route("/posts").post(postsController.create);
 
 //comments routes
 router.route("/comments").post(commentsController.create);
+
+//submissions routes
+router
+  .route("/submissions")
+  .get(submissionsController.getAllByLessonIdAndStudentId)
+  .post(submissionsController.create);
+
+//admin routes
+router
+  .route("/admin/submissions/:lessonId")
+  .get(submissionsController.getAllByLessonId);
 
 export default router;

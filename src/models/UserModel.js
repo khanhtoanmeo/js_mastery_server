@@ -5,6 +5,7 @@ const StudentsShema = new mongoose.Schema({
   email: String,
   password: String,
   name: String,
+  isAdmin: { type: Boolean, default: false },
 });
 
 const StudentsModel = mongoose.model("students", StudentsShema);

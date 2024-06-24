@@ -1,14 +1,14 @@
 import { studentsData } from "../const/studentsData";
+import { deleteAllData } from "../repositories/allRepositories";
 import {
   createStudent,
-  deleteAllStudents,
   getAllStudents,
 } from "../repositories/studentsRepository";
 
 export const sync = async (req, res) => {
   try {
     const students = await getAllStudents();
-
+    // await deleteAllData();
     if (!students.length) {
       await Promise.all(studentsData.map((stu) => createStudent(stu)));
       console.log("Sync students successfully");

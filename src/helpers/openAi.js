@@ -1,9 +1,13 @@
 export const getAnalyzingCodeQuery = (code, question) => {
-  return `Hãy nhìn vào đoạn code dưới đây '${code}' và đây là câu hỏi '${question}', Hãy phân tích một cách ngắn gọn điểm sai và điểm tốt ở trong đoạn code, đừng đưa ra đáp án, chỉ cần nêu ra cách cải thiện, giữa các phần nên có ngăn cách bởi kí tự xuống dòng`;
+  return `Hãy nhìn vào đoạn code dưới đây '${code}' và đây là câu hỏi '${question}',
+   Hãy phân tích một cách ngắn gọn điểm sai và điểm tốt ở trong đoạn code, đừng đưa ra đáp án, chỉ cần nêu ra cách cải thiện, 
+   Chỉ trả lời bằng format object {good:string, bad:string, improvement: string}
+   , trong đó good là những điểm tốt ở trong code, bad là những lỗi sai hoặc điểm chưa tốt trong code, improvement là gợi ý những cách để cải thiện bài code, không có thêm chữ cái nào trong câu trả lời ngoại trừ object đó`;
 };
 
 export const getGeneratingQuestionQuery = (topic) => {
-  return `Hãy tạo 1 bài tập Javascript thuần theo chủ đề '${topic}'. Chỉ tạo ra bài tập xử lí với ngôn javascript thuần, không xử lý DOM, không cần viết gì thêm trong câu trả lời của bạn. Không cần đưa gợi ý, chỉ tạo duy nhất 1 bài tập.`;
+  return `Hãy tạo 1 bài tập Javascript thuần theo chủ đề '${topic}'. Chỉ tạo ra bài tập xử lí với ngôn javascript thuần,
+   không xử lý DOM, không cần viết gì thêm trong câu trả lời của bạn. Không cần đưa gợi ý, chỉ tạo duy nhất 1 bài tập.`;
 };
 
 export const getAskingChatGptQuery = (query) => {

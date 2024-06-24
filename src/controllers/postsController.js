@@ -1,10 +1,7 @@
 import { ObjectId } from "mongodb";
 import { getAllCommentsFromAPost } from "../repositories/commentsRepository";
 import { createPost, getAllPosts } from "../repositories/postsRepository";
-import {
-  getStudentByEmail,
-  getStudentById,
-} from "../repositories/studentsRepository";
+import { getStudentByEmail } from "../repositories/studentsRepository";
 
 export const getAll = async (req, res) => {
   try {
