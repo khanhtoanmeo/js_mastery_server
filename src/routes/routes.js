@@ -12,6 +12,7 @@ router.route("/students/sync").post(studentsController.sync);
 
 //auth routes
 router.route("/auth/login").post(authController.login);
+router.route("/auth/signup").post(authController.signup);
 
 //code routes
 router.route("/code/execute").post(codeController.executeCode);
