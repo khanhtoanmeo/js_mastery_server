@@ -11,7 +11,7 @@ configMiddleWare(app);
 app.use("/api", router);
 
 app.listen(port, () => {
-  console.log("app listening on port ", port);
+  console.log("the app is listening on port ", port);
 });
 
 export default app;
