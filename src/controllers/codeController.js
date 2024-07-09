@@ -96,8 +96,8 @@ export const askChatGpt = async (req, res) => {
 
     const data = await makeQuestion(getAskingChatGptQuery(query));
 
-    const { explanation, examples } = JSON.parse(data);
-    console.log("EXP :: ", explanation, examples);
+    // const { explanation, examples } = JSON.parse(data);
+    // console.log("EXP :: ", explanation, examples);
 
     res.json({
       success: true,
