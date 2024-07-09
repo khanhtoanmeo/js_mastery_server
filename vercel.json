@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "routes": [{ "src": "/(.*)", "dest": "/src/index.js" }],
+  "routes": [{ "src": "/(.*)", "dest": "src/api/index.js" }],
   "functions": {
     "src/api/index.js": {
       "maxDuration": 60
