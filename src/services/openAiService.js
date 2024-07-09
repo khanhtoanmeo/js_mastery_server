@@ -16,6 +16,6 @@ export const makeQuestion = async (question, context = JS_TEACHER_CONTEXT) => {
     ],
   });
 
-  console.log("COMPLETIONS  ", completion);
+  console.log("COMPLETIONS  ", completion.choices[0].message.content);
   return completion.choices[0].message.content;
 };
