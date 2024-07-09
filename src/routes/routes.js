@@ -7,10 +7,6 @@ import * as postsController from "../controllers/postsController";
 import * as commentsController from "../controllers/commentsController";
 import * as submissionsController from "../controllers/submissionController";
 
-router.route("/", (req, res) => {
-  res.json({ message: "Test" });
-});
-
 //students routes
 router.route("/students/sync").post(studentsController.sync);
 
